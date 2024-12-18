@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Nueva Mascota</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registrar Nueva Mascota</h1>
+        <div class="card shadow">
+            <div class="card-body">
+                <!-- Formulario para insertar una nueva mascota -->
+                <form action="/listar_tb_mascotas" method="POST">
+                    <!-- Campo para el nombre de la mascota -->
+                    <div class="mb-3">
+                        <label for="nombre_mascota" class="form-label">Nombre de la Mascota:</label>
+                        <input type="text" id="nombre_mascota" name="nombre_mascota" 
+                               class="form-control" placeholder="Ingresa el nombre de la mascota" required>
+                    </div>
+
+                    <!-- Campo para el nombre del dueño -->
+                    <div class="mb-3">
+                        <label for="nombre_dueno" class="form-label">Nombre del Dueño:</label>
+                        <input type="text" id="nombre_dueno" name="nombre_dueno"
+                               class="form-control" placeholder="Ingresa el nombre del dueño" required>
+                    </div>
+
+                    <!-- Campo para el peso de la mascota -->
+                    <div class="mb-3">
+                        <label for="peso_de_mascotas" class="form-label">Peso de la Mascota (kg):</label>
+                        <input type="number" step="0.01" id="peso_de_mascotas" name="peso_de_mascotas"
+                               class="form-control" placeholder="Ingresa el peso de la mascota" required>
+                    </div>
+
+                    <!-- Campo para el tipo de mascota -->
+                    <div class="mb-3">
+                        <label for="tipo_mascotas" class="form-label">Tipo de Mascota:</label>
+                        <input type="text" id="tipo_mascotas" name="tipo_mascotas"
+                               class="form-control" placeholder="Ingresa el tipo de mascota (perro, gato, etc.)" required>
+                    </div>
+
+                    <!-- Botones de guardar y cancelar -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                        <a href="/" class="btn btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
